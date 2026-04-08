@@ -1,6 +1,5 @@
 import React from "react";
 import { whoWeAre } from "../data/aboutData";
-import ReadMore from "../components/ReadMore";
 import ReadMoreText from "../components/ReadMore";
 
 export default function About() {
@@ -23,66 +22,6 @@ Our work spans research, education, social welfare, disability rights, and legal
             <ReadMoreText intro={introText} fullText={fullText} />
           </div>
         </section>
-
-        {/* <section className="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <img
-              src={img("about/our mission.jpg")}
-              alt="Mission"
-              className="rounded-2xl shadow-lg object-cover w-full h-[350px]"
-            />
-          </div>
-          <div>
-            <h2 className="text-3xl font-pacifico text-green-700 mb-4">
-              Our Mission
-            </h2>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              To eradicate the stigma associated with leprosy and to empower
-              individuals and families through education, medical care, and
-              social inclusion. We believe in restoring dignity and hope for
-              every affected life.
-            </p>
-
-            <h2 className="text-2xl font-pacifico text-green-700 mt-8 mb-4">
-              Our Vision
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-              A world free from leprosy-related discrimination, where every
-              person lives with equal opportunities, self-respect, and social
-              acceptance.
-            </p>
-          </div>
-        </section>
-
-    
-        <section className="bg-white py-16">
-          <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-            <div className="order-2 md:order-1">
-              <h2 className="text-3xl font-pacifico text-green-700 mb-4">
-                Our Story
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Founded in 2015, Healing Lives NGO began as a small volunteer
-                group dedicated to spreading awareness about leprosy in rural
-                India. Over time, we expanded our outreach programs, health
-                camps, and rehabilitation centers, touching the lives of
-                thousands.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                Today, we collaborate with healthcare professionals, local
-                communities, and government initiatives to create long-lasting
-                social impact and transform lives.
-              </p>
-            </div>
-            <div className="order-1 md:order-2">
-              <img
-                src={img("about/our vision.jpg")}
-                alt="Our Story"
-                className="rounded-2xl shadow-lg object-cover w-full h-[350px]"
-              />
-            </div>
-          </div>
-        </section> */}
         {/* WHO WE ARE (MAP BASED) */}
         {whoWeAre.map((item, index) => (
           <section

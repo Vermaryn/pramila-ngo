@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaMapMarkerAlt,
   FaPhoneAlt,
@@ -9,6 +9,40 @@ import {
 } from "react-icons/fa";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+  const handleChange = (e) => {
+    setFormData({...formData, [e.target.name]: e.target.value});
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try{
+      const res = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers:{
+          "Content-Type" : "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await res.json();
+      console.log(data);
+      alert("Message sent successfully!");
+
+      setFormData({
+        name:"" ,
+        email:"",
+        message:""
+      })
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <section
       id="contact"
@@ -41,11 +75,11 @@ export default function Contact() {
               </div>
               <div className="flex items-center gap-3">
                 <FaPhoneAlt className="text-blue-600 text-xl" />
-                <span className="text-gray-700">+91 8057915750</span>
+                <span className="text-gray-700">+91 8191019111</span>
               </div>
               <div className="flex items-center gap-3">
                 <FaEnvelope className="text-blue-600 text-xl" />
-                <span className="text-gray-700">pehalekasha@gmail.com</span>
+                <span className="text-gray-700">pramilaekasha@gmail.com</span>
               </div>
             </div>
 
@@ -73,23 +107,35 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <form className="bg-white p-8 rounded-2xl shadow-lg space-y-5 border border-gray-100">
+          <form 
+            onSubmit={handleSubmit}
+
+          className="bg-white p-8 rounded-2xl shadow-lg space-y-5 border border-gray-100">
             <h3 className="text-xl font-semibold text-gray-800 mb-4">
               Send us a Message
             </h3>
             <input
               type="text"
               placeholder="Full Name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
               className="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition"
             />
             <input
               type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Email Address"
               className="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition"
             />
             <textarea
               rows="4"
               placeholder="Write your message..."
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
               className="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition"
             ></textarea>
             <button

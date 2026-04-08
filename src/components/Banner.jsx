@@ -21,11 +21,11 @@ export default function Banner() {
             className="rounded-2xl overflow-hidden shadow-lg"
           >
             <SwiperSlide>
-              <div className="relative">
+              <div className="relative w-full  overflow-hidden">
                 <img
-                  src={img("bannerImages/child.jpg")}
+                  src="https://res.cloudinary.com/dxbpf3dge/image/upload/v1770554297/IMG-20260113-WA0126_pkhvs7.jpg"
                   alt="Helping hands reaching out to people in need"
-                  className="w-full h-[420px] object-cover"
+                  className="w-full h-[420px] object-cover rounded-2xl"
                 />
                 <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center text-white px-4">
                   <h2 className="text-3xl md:text-5xl font-bold">
@@ -59,20 +59,14 @@ export default function Banner() {
                 className="w-full h-[420px] object-cover rounded-2xl"
               />
             </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={img("bannerImages/kid3.jpg")}
-                alt="Community awareness programs"
-                className="w-full h-[420px] object-cover rounded-2xl"
-              />
-            </SwiperSlide>
+
           </Swiper>
         </div>
 
 
         <div className="grid md:grid-cols-2 gap-8 bg-white p-6 rounded-2xl shadow-md mb-10">
           <img
-            src={img("bannerImages/child.jpg")}
+            src="https://res.cloudinary.com/dxbpf3dge/image/upload/v1768737580/WhatsApp_Image_2026-01-11_at_8.16.17_AM_2_u18roc.jpg"
             alt="People being helped through NGO work"
             className="rounded-xl shadow-md object-cover"
           />

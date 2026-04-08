@@ -18,7 +18,7 @@ export const whatWeDo = [
         title: "Education for Marginalized Children ",
         description:
           "We support school education for children living in leprosy colonies and disadvantaged communities, especially during emergencies when access to education is disrupted.",
-        image: "https://res.cloudinary.com/dxbpf3dge/image/upload/v1768737580/WhatsApp_Image_2026-01-11_at_8.16.17_AM_2_u18roc.jpg",
+        image: "https://res.cloudinary.com/dxbpf3dge/image/upload/v1769534138/WhatsApp_Image_2026-01-13_at_5.16.35_PM_3_mijps2.jpg",
       },
       {
         id: 4,
@@ -32,14 +32,14 @@ export const whatWeDo = [
         title: " Disability Rights & Accessibility  ",
         description:
           "We work for the protection and promotion of disability rights, ensuring access to government schemes, benefits, and inclusive policies.",
-        image: "https://res.cloudinary.com/dxbpf3dge/image/upload/v1768737581/WhatsApp_Image_2026-01-11_at_8.17.09_AM_2_gy0ey1.jpg",
+        image: "https://res.cloudinary.com/dxbpf3dge/image/upload/v1769534139/WhatsApp_Image_2026-01-13_at_5.25.30_PM_yikilz.jpg",
       },
       {
         id: 6,
         title: "Legal Awareness & Access to Justice ",
         description:
           "We assist marginalized individuals in understanding their legal rights and advocate for equal access to justice, especially in cases of discrimination and exclusion.",
-        image: "https://res.cloudinary.com/dxbpf3dge/image/upload/v1768737581/WhatsApp_Image_2026-01-11_at_8.17.10_AM_1_re94wu.jpg",
+        image: "https://res.cloudinary.com/dxbpf3dge/image/upload/v1769534389/WhatsApp_Image_2026-01-13_at_5.24.09_PM_ycrfra.jpg",
       },
       {
         id: 7,

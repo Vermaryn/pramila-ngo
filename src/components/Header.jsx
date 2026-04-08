@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import {
-  FaUserGroup,
   FaXmark,
   FaEnvelope,
   FaPhone,
   FaBars,
 } from "react-icons/fa6";
-import { img } from "../utils/imagePath";
 
 
 export default function Header() {
@@ -22,10 +20,10 @@ export default function Header() {
             href="mailto:pehalekasha@gmail.com"
             className="flex items-center gap-1"
           >
-            <FaEnvelope /> pehalekasha
+            <FaEnvelope /> pramilaekasha
           </a>
           <a href="tel:1800-425-8622" className="flex items-center gap-1">
-            <FaPhone /> +91 8057915750
+            <FaPhone /> +91 8191019111
           </a>
         </div>
       </div>
@@ -33,9 +31,9 @@ export default function Header() {
       <nav className="flex items-center justify-between px-10 py-3 font-pacifico text-xl relative flex-wrap">
 
         <Link to="/" className="flex items-center gap-2">
-          <img src={img("images/icon.png")} alt="Logo" className="h-12 w-auto" />
+          <img src="https://res.cloudinary.com/dxbpf3dge/image/upload/v1770746185/logo_fmm8tv.png" alt="Logo" className="h-20 w-auto" />
           <div className="flex flex-col leading-tight">
-            <span className="text-2xl font-pacifico text-green-700">Pehal</span>
+            <span className="text-2xl font-pacifico text-green-700">Pramila</span>
             <span className="text-sm text-gray-600 tracking-wide">Ek Asha</span>
           </div>
         </Link>
@@ -102,6 +100,18 @@ export default function Header() {
               Contact Us
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/admin"
+              className={({ isActive }) =>
+                `hover:text-blue-500 transition ${
+                  isActive ? "text-blue-600 font-semibold" : ""
+                }`
+              }
+            >
+              Admin panel
+            </NavLink>
+          </li>
         </ul>
 
         {/* Right: Donate button */}
@@ -162,6 +172,13 @@ export default function Header() {
             className="hover:text-blue-500 transition"
           >
             Contact Us
+          </NavLink>
+          <NavLink
+            onClick={() => setOpen(false)}
+            to="/admin/login"
+            className="hover:text-blue-500 transition"
+          >
+            Admin Panel
           </NavLink>
           <Link
             to="/donate"

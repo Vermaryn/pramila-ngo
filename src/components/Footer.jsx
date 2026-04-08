@@ -33,10 +33,10 @@ export default function Footer() {
                 href="mailto:pehalekasha@gmail.com"
                 className="text-green-400 hover:text-green-300 hover:underline transition"
               >
-                pehalekasha@gmail.com
+                pramilaekasha@gmail.com
               </a>
             </span>
-            <span>Phone: +91 8057915750</span>
+            <span>Phone: +91 8191019111</span>
           </p>
 
           <div className="flex md:justify-end justify-start space-x-5 text-xl mt-4">
@@ -53,7 +53,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between pt-4 text-sm text-gray-500">
           <p>
             © {new Date().getFullYear()}{" "}
-            <span className="text-green-400 font-medium">Pehal ek asha</span>. All rights reserved.
+            <span className="text-green-400 font-medium">Pramila ek asha</span>. All rights reserved.
           </p>
           <p className="mt-2 md:mt-0">
             Designed with 💚 by <span className="text-green-400">Pradeep Verma</span>
