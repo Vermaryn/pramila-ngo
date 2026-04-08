@@ -4,7 +4,7 @@ export default function AdminContacts(){
     const  [ contacts, setContacts] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/contact",{
+        fetch(`${import.meta.env.VITE_API_URL}/api/contact`,{
             headers:{
                 Authorization: "Bearer " + localStorage.getItem("token"),
             },

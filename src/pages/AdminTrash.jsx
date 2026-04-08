@@ -5,32 +5,38 @@ export default function AdminTrash() {
 
   // fetch trash data
   const fetchTrash = () => {
-    fetch("http://localhost:5000/api/contact/trash")
-      .then((res) => res.json())
-      .then((data) => setContacts(data));
-  };
+  fetch(`${import.meta.env.VITE_API_URL}/api/contact/trash`)
+    .then((res) => res.json())
+    .then((data) => setContacts(data));
+};
 
-  useEffect(() => {
-    fetchTrash();
-  }, []);
+useEffect(() => {
+  fetchTrash();
+}, []);
 
-  // ✅ restore
-  const handleRestore = async (id) => {
-    await fetch(`http://localhost:5000/api/contact/restore/${id}`, {
+// ✅ restore
+const handleRestore = async (id) => {
+  await fetch(
+    `${import.meta.env.VITE_API_URL}/api/contact/restore/${id}`,
+    {
       method: "PUT",
-    });
+    }
+  );
 
-    fetchTrash(); // refresh
-  };
+  fetchTrash(); // refresh
+};
 
-  // ✅ permanent delete
-  const handleDelete = async (id) => {
-    await fetch(`http://localhost:5000/api/contact/permanent/${id}`, {
+// ✅ permanent delete
+const handleDelete = async (id) => {
+  await fetch(
+    `${import.meta.env.VITE_API_URL}/api/contact/permanent/${id}`,
+    {
       method: "DELETE",
-    });
+    }
+  );
 
-    fetchTrash(); // refresh
-  };
+  fetchTrash(); // refresh
+};
 
   return (
     <div className="p-6">

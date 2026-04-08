@@ -4,10 +4,10 @@ export default function Blogs() {
   const [magazines, setMagazines] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/magazine")
-      .then((res) => res.json())
-      .then((data) => setMagazines(data));
-  }, []);
+  fetch(`${import.meta.env.VITE_API_URL}/api/magazine`)
+    .then((res) => res.json())
+    .then((data) => setMagazines(data));
+}, []);
 
   return (
     <section id="blogs" className="py-16 bg-gray-50 font-[Poppins]">
