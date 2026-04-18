@@ -4,7 +4,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { img } from "../utils/imagePath";
 
 
 export default function Banner() {
@@ -23,7 +22,7 @@ export default function Banner() {
             <SwiperSlide>
               <div className="relative w-full  overflow-hidden">
                 <img
-                  src="https://res.cloudinary.com/dxbpf3dge/image/upload/v1770554297/IMG-20260113-WA0126_pkhvs7.jpg"
+                  src="https://res.cloudinary.com/dxbpf3dge/image/upload/q_auto/f_auto/v1770554297/IMG-20260113-WA0126_pkhvs7.jpg"
                   alt="Helping hands reaching out to people in need"
                   className="w-full h-[420px] object-cover rounded-2xl"
                 />
@@ -46,7 +45,7 @@ export default function Banner() {
 
             <SwiperSlide>
               <img
-                src={img("bannerImages/great.jpg")}
+                src="https://res.cloudinary.com/dxbpf3dge/image/upload/q_auto/f_auto/v1770553717/great_orlcq1.jpg"
                 alt="Healthcare support for patients"
                 className="w-full h-[420px] object-cover rounded-2xl"
               />
@@ -54,7 +53,7 @@ export default function Banner() {
 
             <SwiperSlide>
               <img
-                src={img("bannerImages/home.jpg")}
+                src="https://res.cloudinary.com/dxbpf3dge/image/upload/q_auto/f_auto/v1770553745/home_monlid.jpg"
                 alt="Community awareness programs"
                 className="w-full h-[420px] object-cover rounded-2xl"
               />
@@ -91,7 +90,7 @@ export default function Banner() {
 
         <div className="grid md:grid-cols-2 gap-8 bg-white p-6 rounded-2xl shadow-md">
           <img
-            src={img("bannerImages/volunteer3.jpg")}
+            src="https://res.cloudinary.com/dxbpf3dge/image/upload/q_auto/f_auto/v1776446503/volunteer3_vgi8yw.jpg"
             alt="Volunteer supporting children"
             className="rounded-xl shadow-md object-cover"
           />
